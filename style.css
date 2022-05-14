@@ -10,26 +10,30 @@
 
 .head h1 {
   text-transform: uppercase;
-  margin-bottom: 30px;
   text-align: center;
   font-size: 2.3rem;
   letter-spacing: 0.2rem;
-  color: black;
+  color: white;
+  margin: 30px 0px;
 }
 
 .head h1 span {
-  color: red;
+  color: #647bff;
+}
+
+body {
+  background-color: #090a1a;
 }
 
 /* Start of navbar styling */
 
 .navbar {
-  height: 10vh;
+  height: 60px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
   background-color: #171b3c;
   z-index: 100;
@@ -43,18 +47,75 @@
 
 .navlist li {
   list-style: none;
-  padding: 20px 40px;
+  padding: 20px 25px;
 }
 
 .navlist li a {
   text-decoration: none;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 800;
+  text-transform: capitalize;
 }
 
 .navlist li a:hover {
   color: red;
+}
+
+/* Start of hero section styling  */
+
+#hero .hero_container {
+  padding: 0 30px;
+  width: 100%;
+  height: 90vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero_container img {
+  height: 175px;
+  width: 175px;
+  border-radius: 105px;
+  margin-top: 60px;
+}
+
+#hero #title_1 {
+  margin-top: 30px;
+  font-size: 1.5rem;
+}
+
+#hero #title_2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #647bff;
+  letter-spacing: 0.4rem;
+}
+
+#hero #sub_title {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+#hero #sub_title span {
+  color: #647bff;
+}
+
+#hero #info {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 8px;
+  color: white;
+  border: 3px solid red;
+  border-radius: 10px;
+  letter-spacing: 0.1rem;
+}
+
+#hero #info:hover {
+  background-color: red;
 }
 
 .burger {
@@ -73,67 +134,26 @@
 
 .logo_name {
   position: absolute;
-  top: 1.3rem;
   left: 6rem;
-  color: red;
+  color: #647bff;
   font-size: 20px;
   font-weight: 800;
-}
-
-/* ffdsfsf */
-
-/* Start of hero section styling  */
-
-#hero .hero_container {
-  padding: 0 30px;
-  width: 100%;
-  height: 100vh;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #171b3c;
-}
-
-.hero_container img {
-  height: 200px;
-  width: 200px;
-  border-radius: 105px;
-}
-
-#hero #title_1 {
-  margin-top: 20px;
-  font-size: 1.5rem;
-}
-
-#hero #title_2 {
-  font-size: 4rem;
   text-transform: uppercase;
-  color: red;
-}
-
-#hero #sub_title {
-  font-size: 1.3rem;
-  margin-bottom: 20px;
-}
-
-#hero #sub_title span {
-  color: red;
-}
-
-#hero #info {
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 10px 8px;
-  color: white;
-  border: 3px solid red;
-  border-radius: 10px;
   letter-spacing: 0.1rem;
 }
 
-#hero #info:hover {
-  background-color: red;
+#hero .icons_list {
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 175px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#hero .icons_list .list {
+  color: white;
 }
 
 /* End of hero section styling */
@@ -143,7 +163,8 @@
 #about .about_container {
   padding: 50px 80px;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
+  color: white;
 }
 
 #about .about_content {
@@ -177,7 +198,7 @@
 
 #about .col_right p span {
   text-transform: uppercase;
-  color: red;
+  color: #647bff;
   font-weight: 600;
 }
 
@@ -193,6 +214,7 @@
   color: black;
   border: solid red 3px;
   border-radius: 10px;
+  color: white;
 }
 
 #about .resume a:hover {
@@ -202,11 +224,6 @@
 /* End of about me section styling  */
 
 /* Start of my skills section styling  */
-
-/* #skill{
-      background-color: rgb(41, 40, 40);
-      color: white;
-  } */
 
 #skill .skill_container {
   width: 100%;
@@ -220,100 +237,122 @@
   justify-content: center;
 }
 
-#skill .skill_col_left h2 {
-  font-size: 1.5rem;
+#skill .left_content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 0px 30px;
 }
 
-#skill .skill_col_left p {
-  font-size: 1rem;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  text-align: justify;
-  line-height: 1.5;
+#skill .left_content .skill_content_1 {
+  width: 100%;
 }
 
-#skill .skill_col_right .bars {
+#skill .left_content .skill_content_2 {
+  width: 100%;
+}
+
+#skill .right_content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 0px 30px;
+}
+
+#skill .right_content .skill_content_3 {
+  width: 100%;
+  margin-bottom: 45px;
+}
+
+#skill .right_content .skill_content_4 {
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 60px;
+}
+
+#skill .item {
   margin-bottom: 20px;
 }
 
-#skill .skill_col_right {
-  width: 100%;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 1.2rem;
+#skill .title h1 {
+  color: white;
+  font-size: 1.9rem;
+  margin: 10px 0px 20px 0px;
+  text-transform: capitalize;
 }
 
-#skill .skill_col_right .bars_info {
+#skill .item_info span {
+  color: white;
+  text-transform: capitalize;
+}
+
+#skill .item_line progress {
+  width: 100%;
+}
+
+#skill .item .item_info {
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-#skill .skill_col_right .line {
-  height: 10px;
-  width: 100%;
-  background-color: darkgrey;
-  position: relative;
-}
-
-#skill .skill_col_right .line::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  background-color: red;
-}
-
-#skill .skill_col_right .html::after {
-  width: 90%;
-}
-
-#skill .skill_col_right .css::after {
-  width: 80%;
-}
-
-#skill .skill_col_right .javascript::after {
-  width: 80%;
-}
-
-#skill .skill_col_right .python::after {
-  width: 90%;
-}
-
-#skill .skill_col_right .django::after {
-  width: 85%;
-}
-
-#skill .skill_col_right .mysql::after {
-  width: 85%;
+  align-items: center;
 }
 
 /* End of my skills section styling  */
 
 /* Start of contact section stylying   */
 
-#contact {
-  background-color: rgb(41, 40, 40);
-  color: white;
-}
-
 #contact .contact_container {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   padding: 50px 50px;
 }
 
-#contact .head h1 {
+.contact_container h1 {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  letter-spacing: 0.2rem;
+  margin-top: 30px;
+}
+
+.contact_container h1 span {
+  color: #647bff;
+}
+
+.contact_container h2 {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  color: #647bff;
+  letter-spacing: 0.2rem;
+}
+
+.contact_container h3 {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 20px;
   color: white;
 }
 
-#contact .col_left_head h2 {
-  font-size: 1.3rem;
-  margin-bottom: 25px;
-  text-align: center;
+.contact_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact_col_left {
+  width: 35%;
+  padding-left: 80px;
+  margin-top: 60px;
+}
+
+.contact_col_right {
+  width: 60%;
 }
 
 #contact .col_right_head h2 {
@@ -321,43 +360,31 @@
   font-size: 1.8rem;
   margin-bottom: 25px;
   margin-top: 30px;
-  text-align: center;
+  color: white;
+  text-align: left;
 }
 
 #contact .col_right_head h2 span {
-  color: red;
+  color: #647bff;
 }
 
 #contact .icons {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  color: white;
 }
 
 #contact .icons i {
   width: 40px;
-  font-size: 1.2rem;
-  color: red;
+  font-size: 1.8rem;
+  color: #647bff;
 }
 
 #contact .head {
-  font-size: 1rem;
-}
-
-#contact .material_icons .icons_list {
-  font-size: 1.5rem;
-  font-weight: 500;
-  width: 200px;
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: red;
-}
-
-#contact .icons_list .list {
-  color: red;
+  font-size: 1.2rem;
+  padding-left: 25px;
 }
 
 #contact .contact_col_right .field_section {
@@ -378,15 +405,14 @@
   font-family: sans-serif;
 }
 
-#contact .button {
+/* #contact .button {
   width: 100px;
-}
+} */
 
-#contact .contact_col_right .button button {
+#contact .contact_col_right .submit {
   padding: 10px 15px;
-  border-radius: 10px;
-  font-size: 1.2rem;
-  border: solid red 3px;
+  border-radius: 30px;
+  font-size: 1.1rem;
   font-weight: 600;
   color: black;
   background-color: white;
@@ -403,9 +429,9 @@
 
 footer {
   width: 100%;
-  height: 10px;
+  height: 4px;
   background-color: white;
-  color: black;
+  color: white;
   text-align: center;
   font-size: 1rem;
 }
@@ -416,20 +442,22 @@ footer span {
 }
 
 footer a {
-  color: red;
+  color: #647bff;
   text-transform: uppercase;
   font-weight: 600;
 }
 
 /* footer section ends  */
 
-/* asdad */
+/* media queries starts  */
 
 @media only screen and (max-width: 860px) {
   .navbar {
     height: fit-content;
     align-items: center;
     justify-content: center;
+    height: 450px;
+    transition: all 0.7s ease-out;
   }
 
   .navlist {
